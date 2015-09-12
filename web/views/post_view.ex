@@ -6,7 +6,7 @@ defmodule UnblogasoApi.PostView do
   end
 
   def render("show.json", %{post: post}) do
-    %{data: render_one(post, UnblogasoApi.PostView, "post.json")}
+    %{post: render_one(post, UnblogasoApi.PostView, "post.json")}
   end
 
   def render("post.json", %{post: post}) do
