@@ -1,1 +1,1 @@
-web: mix phoenix.server
+web: elixer -S mix phoenix.server
