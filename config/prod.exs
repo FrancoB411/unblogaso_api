@@ -24,7 +24,10 @@ config :logger, level: :info
 # Configure your database
 config :unblogaso_api, UnblogasoApi.Repo,
   adapter: Ecto.Adapters.Postgres,
-  url: System.get_env("DATABASE_URL") || "ecto://postgres:postgres@localhost/blog_backend_prod",
+  username: "postgres",
+  password: "postgres",
+  database: "unblogaso_api_dev",
+  url: System.get_env("DATABASE_URL") || "ecto://postgres:postgres@localhost/unblogaso_api_dev",
   pool_size: 20
 # ## SSL Support
 #
