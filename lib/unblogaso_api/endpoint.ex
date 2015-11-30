@@ -29,7 +29,8 @@ defmodule UnblogasoApi.Endpoint do
 
   plug Plug.MethodOverride
   plug Plug.Head
-  plug CORSPlug, [origin: "http://localhost:4200"]
+  # plug CORSPlug, [origin: "http://localhost:4200"]
+  plug CORSPlug, [origin: [System.get_env("FRONTEND_URL")]]
 
   plug Plug.Session,
     store: :cookie,
